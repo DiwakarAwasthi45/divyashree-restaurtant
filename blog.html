@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+ <!-- Top Header -->
+<div class="hidden md:block bg-amber-600 text-white">
+  <div class="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center text-sm">
+    <div class="flex items-center gap-6">
+      <span>📞 +977 98XXXXXXXX</span>
+      <span>📧 info@divyashree.com</span>
+    </div>
+
+    <div class="flex items-center gap-6">
+      <span>🕒 Open Daily: 10 AM - 11 PM</span>
+      <span>📍 Kathmandu, Nepal</span>
+    </div>
+  </div>
+</div>
+
+<!-- Main Navbar -->
+<header class="sticky top-0 z-50 bg-black/95 backdrop-blur-md border-b border-gray-800">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex items-center justify-between h-20">
+
+      <!-- Logo -->
+      <a href="/" class="text-3xl font-extrabold tracking-wide">
+        <span class="text-white">Divya</span>
+        <span class="text-amber-400">Shree</span>
+      </a>
+
+      <!-- Desktop Menu -->
+      <nav class=" hidden lg:block">
+        <ul class="flex items-center gap-8 font-medium">
+          <li><a href="index.html" class="hover:text-amber-400 transition text-white">Home</a></li>
+          <li><a href="menu.html" class="hover:text-amber-400 transition text-white">Menu</a></li>
+          <li><a href="bar.html" class="hover:text-amber-400 transition text-white">Bar</a></li>
+          <li><a href="gallery.html" class="hover:text-amber-400 transition text-white">Gallery</a></li>
+          <li><a href="booking.html" class="hover:text-amber-400 transition text-white">Book Table</a></li>
+          <li><a href="blog.html" class="hover:text-amber-400 transition text-white">Blog</a></li>
+          <li><a href="about.html" class="hover:text-amber-400 transition text-white">About</a></li>
+          <li><a href="contact.html" class="hover:text-amber-400 transition text-white">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right Side -->
+      <div class="flex items-center gap-4">
+
+        <!-- CTA Button -->
+        <a
+          href="booking.html"
+          class="hidden sm:flex bg-amber-500 hover:bg-amber-600 px-5 py-2.5 rounded-full font-semibold text-black transition"
+        >
+          Reserve Now
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button id="menuBtn" class="lg:hidden text-white">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Menu -->
+<div id="mobileMenu"
+  class="fixed top-0 left-1 h-full w-72 bg-black text-white border-r border-gray-800
+         transform -translate-x-full transition-transform duration-300 ease-in-out lg:hidden z-50">
+
+  <div class="p-6 border-b border-gray-800 flex justify-between items-center">
+    <h2 class="text-amber-400 font-bold text-xl">Menu</h2>
+
+    <button id="closeBtn" class="text-white text-2xl">
+      ✖
+    </button>
+  </div>
+
+  <ul class="flex flex-col p-6 space-y-5 font-medium">
+    <li><a href="index.html" class="hover:text-amber-400">Home</a></li>
+    <li><a href="menu.html" class="hover:text-amber-400">Menu</a></li>
+    <li><a href="bar.html" class="hover:text-amber-400">Bar</a></li>
+    <li><a href="gallery.html" class="hover:text-amber-400">Gallery</a></li>
+    <li><a href="booking.html" class="hover:text-amber-400">Book Table</a></li>
+    <li><a href="blog.html" class="hover:text-amber-400">Blog</a></li>
+    <li><a href="about.html" class="hover:text-amber-400">About</a></li>
+    <li><a href="contact.html" class="hover:text-amber-400">Contact</a></li>
+  </ul>
+</div>
+
+
+
+<!-- HERO -->
+<section class="relative h-[50vh] flex items-center justify-center">
+  <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c')] bg-cover bg-center"></div>
+  <div class="absolute inset-0 bg-black/70"></div>
+
+  <div class="relative text-center px-6">
+    <h1 class="text-5xl font-bold text-amber-400">Our Blog</h1>
+    <p class="mt-4 text-gray-300">Food stories, recipes & restaurant updates</p>
+  </div>
+</section>
+
+<!-- BLOG GRID -->
+<section class="max-w-7xl mx-auto px-6 py-16 bg-gray-200">
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+    <!-- POST 1 -->
+    <div class="bg-zinc-900 rounded-2xl overflow-hidden hover:-translate-y-2 transition">
+      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836"
+        class="h-56 w-full object-cover">
+      <div class="p-6">
+        <span class="text-amber-400 text-sm">Food Tips</span>
+        <h2 class="text-xl font-bold mt-2">How to Enjoy Fine Dining Experience</h2>
+        <p class="text-gray-400 mt-3 text-sm">
+          Learn how to make your dining experience more enjoyable and memorable.
+        </p>
+        <p class="text-gray-500 text-xs mt-4">June 2026</p>
+      </div>
+    </div>
+
+    <!-- POST 2 -->
+    <div class="bg-zinc-900 rounded-2xl overflow-hidden hover:-translate-y-2 transition">
+      <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b"
+        class="h-56 w-full object-cover">
+      <div class="p-6">
+        <span class="text-amber-400 text-sm">Recipes</span>
+        <h2 class="text-xl font-bold mt-2">Perfect Homemade Pasta Secrets</h2>
+        <p class="text-gray-400 mt-3 text-sm">
+          Discover the secret ingredients for restaurant-style pasta.
+        </p>
+        <p class="text-gray-500 text-xs mt-4">May 2026</p>
+      </div>
+    </div>
+
+    <!-- POST 3 -->
+    <div class="bg-zinc-900 rounded-2xl overflow-hidden hover:-translate-y-2 transition">
+      <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b"
+        class="h-56 w-full object-cover">
+      <div class="p-6">
+        <span class="text-amber-400 text-sm">Drinks</span>
+        <h2 class="text-xl font-bold mt-2">Top 5 Cocktails You Must Try</h2>
+        <p class="text-gray-400 mt-3 text-sm">
+          Explore our signature cocktails and bartender recommendations.
+        </p>
+        <p class="text-gray-500 text-xs mt-4">April 2026</p>
+      </div>
+    </div>
+
+    <!-- POST 4 -->
+    <div class="bg-zinc-900 rounded-2xl overflow-hidden hover:-translate-y-2 transition">
+      <img src="https://images.unsplash.com/photo-1544025162-d76694265947"
+        class="h-56 w-full object-cover">
+      <div class="p-6">
+        <span class="text-amber-400 text-sm">Chef Story</span>
+        <h2 class="text-xl font-bold mt-2">Meet Our Head Chef</h2>
+        <p class="text-gray-400 mt-3 text-sm">
+          A journey of passion, flavors, and creativity in our kitchen.
+        </p>
+        <p class="text-gray-500 text-xs mt-4">March 2026</p>
+      </div>
+    </div>
+
+    <!-- POST 5 -->
+    <div class="bg-zinc-900 rounded-2xl overflow-hidden hover:-translate-y-2 transition">
+      <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0"
+        class="h-56 w-full object-cover">
+      <div class="p-6">
+        <span class="text-amber-400 text-sm">Restaurant</span>
+        <h2 class="text-xl font-bold mt-2">Why Ambience Matters in Dining</h2>
+        <p class="text-gray-400 mt-3 text-sm">
+          Explore how environment affects your dining experience.
+        </p>
+        <p class="text-gray-500 text-xs mt-4">February 2026</p>
+      </div>
+    </div>
+
+    <!-- POST 6 -->
+    <div class="bg-zinc-900 rounded-2xl overflow-hidden hover:-translate-y-2 transition">
+      <img src="https://images.unsplash.com/photo-1550547660-d9450f859349"
+        class="h-56 w-full object-cover">
+      <div class="p-6">
+        <span class="text-amber-400 text-sm">News</span>
+        <h2 class="text-xl font-bold mt-2">New Menu Launch This Season</h2>
+        <p class="text-gray-400 mt-3 text-sm">
+          We are excited to introduce our new seasonal dishes.
+        </p>
+        <p class="text-gray-500 text-xs mt-4">January 2026</p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<footer class="bg-black text-gray-300">
+  <div class="max-w-7xl mx-auto px-6 py-16">
+
+    <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+
+      <!-- Restaurant Info -->
+      <div>
+        <h2 class="text-3xl font-extrabold text-amber-400 mb-4">
+          DivyaShree
+        </h2>
+
+        <p class="leading-7">
+          Experience delicious cuisine, premium cocktails, and exceptional
+          hospitality in a warm and elegant atmosphere.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-white text-xl font-semibold mb-4">
+          Quick Links
+        </h3>
+
+        <ul class="space-y-3">
+          <li><a href="#" class="hover:text-amber-400 transition">Home</a></li>
+          <li><a href="#" class="hover:text-amber-400 transition">Menu</a></li>
+          <li><a href="#" class="hover:text-amber-400 transition">Gallery</a></li>
+          <li><a href="#" class="hover:text-amber-400 transition">About Us</a></li>
+          <li><a href="#" class="hover:text-amber-400 transition">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Opening Hours -->
+      <div>
+        <h3 class="text-white text-xl font-semibold mb-4">
+          Opening Hours
+        </h3>
+
+        <ul class="space-y-3 text-gray-300">
+
+  <li class="flex justify-between border-b border-white/10 pb-2">
+    <span>Monday - Friday</span>
+    <span class="text-white">10 AM - 11 PM</span>
+  </li>
+
+  <li class="flex justify-between border-b border-white/10 pb-2">
+    <span>Saturday</span>
+    <span class="text-white">9 AM - 12 AM</span>
+  </li>
+
+  <li class="flex justify-between border-b border-white/10 pb-2">
+    <span>Sunday</span>
+    <span class="text-white">9 AM - 10 PM</span>
+  </li>
+
+  <!-- Highlighted special item -->
+  <li class="mt-4 p-3 bg-amber-500/10 border border-amber-400/30 rounded-lg flex justify-between items-center">
+    <span class="font-medium text-amber-400">Happy Hour</span>
+    <span class="text-white font-semibold">5 – 7 PM daily</span>
+  </li>
+
+</ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h3 class="text-white text-xl font-semibold mb-4">
+          Contact Us
+        </h3>
+
+        <ul class="space-y-3">
+          <li>📍 Kathmandu, Nepal</li>
+          <li>📞 +977 98XXXXXXXX</li>
+          <li>✉️ info@divyashree.com</li>
+        </ul>
+
+        <!-- Social Icons -->
+        <div class="flex gap-4 mt-6">
+          <a href="#" class="hover:text-amber-400 transition"><i class="fa-brands fa-facebook text-2xl"></i></a>
+          <a href="#" class="hover:text-amber-400 transition"><i class="fa-brands fa-square-instagram text-2xl"></i></a>
+          <a href="#" class="hover:text-amber-400 transition"><i class="fa-brands fa-tiktok text-2xl"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Footer -->
+    <div class="border-t border-gray-800 mt-12 pt-6 text-center">
+      <p>
+        © 2026 DivyaShree Restaurant & Bar. All Rights Reserved.
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const closeBtn = document.getElementById("closeBtn");
+  const overlay = document.getElementById("overlay");
+
+  function openMenu() {
+    mobileMenu.classList.remove("-translate-x-full");
+    mobileMenu.classList.add("translate-x-0");
+    overlay.classList.remove("hidden");
+  }
+
+  function closeMenu() {
+    mobileMenu.classList.add("-translate-x-full");
+    mobileMenu.classList.remove("translate-x-0");
+    overlay.classList.add("hidden");
+  }
+
+  menuBtn.addEventListener("click", openMenu);
+  closeBtn.addEventListener("click", closeMenu);
+  overlay.addEventListener("click", closeMenu);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+ <!-- Top Header -->
+<div class="hidden md:block bg-amber-600 text-white">
+  <div class="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center text-sm">
+    <div class="flex items-center gap-6">
+      <span>📞 +977 98XXXXXXXX</span>
+      <span>📧 info@divyashree.com</span>
+    </div>
+
+    <div class="flex items-center gap-6">
+      <span>🕒 Open Daily: 10 AM - 11 PM</span>
+      <span>📍 Kathmandu, Nepal</span>
+    </div>
+  </div>
+</div>
+
+<!-- Main Navbar -->
+<header class="sticky top-0 z-50 bg-black/95 backdrop-blur-md border-b border-gray-800">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex items-center justify-between h-20">
+
+      <!-- Logo -->
+      <a href="/" class="text-3xl font-extrabold tracking-wide">
+        <span class="text-white">Divya</span>
+        <span class="text-amber-400">Shree</span>
+      </a>
+
+      <!-- Desktop Menu -->
+      <nav class=" hidden lg:block">
+        <ul class="flex items-center gap-8 font-medium">
+          <li><a href="index.html" class="hover:text-amber-400 transition text-white">Home</a></li>
+          <li><a href="menu.html" class="hover:text-amber-400 transition text-white">Menu</a></li>
+          <li><a href="bar.html" class="hover:text-amber-400 transition text-white">Bar</a></li>
+          <li><a href="gallery.html" class="hover:text-amber-400 transition text-white">Gallery</a></li>
+          <li><a href="booking.html" class="hover:text-amber-400 transition text-white">Book Table</a></li>
+          <li><a href="blog.html" class="hover:text-amber-400 transition text-white">Blog</a></li>
+          <li><a href="about.html" class="hover:text-amber-400 transition text-white">About</a></li>
+          <li><a href="contact.html" class="hover:text-amber-400 transition text-white">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right Side -->
+      <div class="flex items-center gap-4">
+
+        <!-- CTA Button -->
+        <a
+          href="booking.html"
+          class="hidden sm:flex bg-amber-500 hover:bg-amber-600 px-5 py-2.5 rounded-full font-semibold text-black transition"
+        >
+          Reserve Now
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button id="menuBtn" class="lg:hidden text-white">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Menu -->
+<div id="mobileMenu"
+  class="fixed top-0 left-1 h-full w-72 bg-black text-white border-r border-gray-800
+         transform -translate-x-full transition-transform duration-300 ease-in-out lg:hidden z-50">
+
+  <div class="p-6 border-b border-gray-800 flex justify-between items-center">
+    <h2 class="text-amber-400 font-bold text-xl">Menu</h2>
+
+    <button id="closeBtn" class="text-white text-2xl">
+      ✖
+    </button>
+  </div>
+
+  <ul class="flex flex-col p-6 space-y-5 font-medium">
+    <li><a href="index.html" class="hover:text-amber-400">Home</a></li>
+    <li><a href="menu.html" class="hover:text-amber-400">Menu</a></li>
+    <li><a href="bar.html" class="hover:text-amber-400">Bar</a></li>
+    <li><a href="gallery.html" class="hover:text-amber-400">Gallery</a></li>
+    <li><a href="booking.html" class="hover:text-amber-400">Book Table</a></li>
+    <li><a href="blog.html" class="hover:text-amber-400">Blog</a></li>
+    <li><a href="about.html" class="hover:text-amber-400">About</a></li>
+    <li><a href="contact.html" class="hover:text-amber-400">Contact</a></li>
+  </ul>
+</div>
+
+<section class="relative min-h-screen">
+  <!-- Background Image -->
+  <div
+    class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4')] bg-cover bg-center"
+  ></div>
+
+  <!-- Dark Overlay -->
+  <div class="absolute inset-0 bg-black/70"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 flex min-h-screen items-center justify-center px-6">
+    <div class="max-w-4xl text-center text-white">
+      
+      <span class="text-amber-400 text-sm md:text-lg uppercase tracking-[0.3em]">
+        Welcome to DivyaShree Restaurant & Bar
+      </span>
+
+      <h1 class="mt-4 text-4xl font-extrabold leading-tight sm:text-5xl md:text-6xl lg:text-7xl">
+        Taste the Finest Food &
+        <span class="text-amber-400">Premium Drinks</span>
+      </h1>
+
+      <p class="mt-6 text-base text-gray-300 sm:text-lg md:text-xl">
+        Experience delicious cuisine, handcrafted cocktails, and a warm
+        atmosphere perfect for family dinners, celebrations, and special
+        occasions.
+      </p>
+
+      <div class="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+        <a
+          href="#menu"
+          class="rounded-full bg-amber-500 px-8 py-3 font-semibold text-black transition hover:bg-amber-400"
+        >
+          View Menu
+        </a>
+
+        <a
+          href="#booking"
+          class="rounded-full border-2 border-white px-8 py-3 font-semibold transition hover:bg-white hover:text-black"
+        >
+          Book a Table
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="py-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="text-center mb-12">
+      <span class="text-amber-500 font-semibold uppercase tracking-widest">
+        Special Menu
+      </span>
+      <h2 class="text-4xl font-bold mt-3">
+        Our Chef's Specials
+      </h2>
+      <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
+        Discover our most loved dishes and signature drinks crafted with
+        fresh ingredients and exceptional flavors.
+      </p>
+    </div>
+
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+      <!-- Card 1 -->
+      <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition">
+        <img
+          src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38"
+          alt="Pizza"
+          class="w-full h-60 object-cover"
+        >
+        <div class="p-6">
+          <h3 class="text-xl font-bold">Special Pizza</h3>
+          <p class="text-gray-600 mt-2">
+            Loaded with fresh vegetables, cheese, and premium toppings.
+          </p>
+          <div class="flex justify-between items-center mt-4">
+            <span class="text-amber-500 font-bold text-xl">Rs. 899</span>
+            <a href="order.html" class="bg-amber-500 text-white px-4 py-2 rounded-full">
+              Order Now
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition">
+        <img
+          src="https://images.unsplash.com/photo-1559847844-5315695dadae"
+          alt="Burger"
+          class="w-full h-60 object-cover"
+        >
+        <div class="p-6">
+          <h3 class="text-xl font-bold">Signature Burger</h3>
+          <p class="text-gray-600 mt-2">
+            Juicy beef patty, fresh lettuce, cheese, and special sauce.
+          </p>
+          <div class="flex justify-between items-center mt-4">
+            <span class="text-amber-500 font-bold text-xl">Rs. 699</span>
+             <a href="order.html" class="bg-amber-500 text-white px-4 py-2 rounded-full">
+              Order Now
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition">
+        <img
+          src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b"
+          alt="Cocktail"
+          class="w-full h-60 object-cover"
+        >
+        <div class="p-6">
+          <h3 class="text-xl font-bold">Premium Cocktail</h3>
+          <p class="text-gray-600 mt-2">
+            A refreshing handcrafted cocktail with a unique flavor blend.
+          </p>
+          <div class="flex justify-between items-center mt-4">
+            <span class="text-amber-500 font-bold text-xl">Rs. 799</span>
+            <a href="order.html" class="bg-amber-500 text-white px-4 py-2 rounded-full">
+              Order Now
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Heading -->
+    <div class="text-center mb-14">
+      <span class="text-amber-500 uppercase tracking-widest font-semibold">
+        Signature Dishes
+      </span>
+      <h2 class="text-4xl md:text-5xl font-bold mt-3">
+        Our Most Loved Creations
+      </h2>
+      <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+        Carefully crafted by our chefs using the freshest ingredients and
+        authentic flavors that keep our guests coming back.
+      </p>
+    </div>
+
+    <!-- Dishes -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Dish 1 -->
+      <div class="group overflow-hidden rounded-3xl shadow-lg">
+        <img
+          src="https://images.unsplash.com/photo-1544025162-d76694265947"
+          alt="Grilled Steak"
+          class="h-72 w-full object-cover transition duration-500 group-hover:scale-110"
+        />
+        <div class="p-6 ">
+          <h3 class="text-2xl font-bold">DivyaShree Special Steak</h3>
+          <p class="text-gray-600 mt-3">
+            Premium grilled steak served with seasonal vegetables and our
+            signature house sauce.
+          </p>
+          <div class=" flex justify-between items-center mt-4">
+            <span class="inline-block mt-4 text-amber-500 font-bold text-xl">
+            Rs. 1,299
+          </span>
+           <a href="order.html" class= "bg-amber-500 text-white    px-4 py-2 rounded-full">
+              Order Now
+            </a></div>
+          
+        </div>
+      </div>
+
+      <!-- Dish 2 -->
+      <div class="group overflow-hidden rounded-3xl shadow-lg">
+        <img
+          src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38"
+          alt="Pizza"
+          class="h-72 w-full object-cover transition duration-500 group-hover:scale-110"
+        />
+        <div class="p-6">
+          <h3 class="text-2xl font-bold">Wood Fired Pizza</h3>
+          <p class="text-gray-600 mt-3">
+            Traditional stone-baked pizza topped with fresh herbs and premium cheese.
+          <div class=" flex justify-between items-center mt-4">
+            <span class="inline-block mt-4 text-amber-500 font-bold text-xl">
+            Rs. 1,299
+          </span>
+           <a href="order.html" class= "bg-amber-500 text-white    px-4 py-2 rounded-full">
+              Order Now
+            </a></div>
+        </div>
+      </div>
+
+      <!-- Dish 3 -->
+      <div class="group overflow-hidden rounded-3xl shadow-lg">
+        <img
+          src="https://images.unsplash.com/photo-1559847844-5315695dadae"
+          alt="Burger"
+          class="h-72 w-full object-cover transition duration-500 group-hover:scale-110"
+        />
+        <div class="p-6">
+          <h3 class="text-2xl font-bold">Signature Gourmet Burger</h3>
+          <p class="text-gray-600 mt-3">
+            Juicy beef patty, cheddar cheese, crispy lettuce, and special sauce.
+          </p>
+    <div class=" flex justify-between items-center mt-4">
+            <span class="inline-block mt-4 text-amber-500 font-bold text-xl">
+            Rs. 1,299
+          </span>
+           <a href="order.html" class= "bg-amber-500 text-white    px-4 py-2 rounded-full">
+              Order Now
+            </a></div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section class="py-20 bg-black text-white">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Heading -->
+    <div class="text-center mb-14">
+      <span class="text-amber-400 uppercase tracking-widest font-semibold">
+        Signature Cocktails
+      </span>
+
+      <h2 class="text-4xl md:text-5xl font-bold mt-3">
+        Handcrafted Cocktail Collection
+      </h2>
+
+      <p class="mt-4 text-gray-300 max-w-2xl mx-auto">
+        Discover our expertly crafted cocktails made with premium spirits,
+        fresh ingredients, and unique flavors.
+      </p>
+    </div>
+
+    <!-- Cocktail Cards -->
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+      <!-- Cocktail 1 -->
+      <div class="bg-zinc-900 rounded-3xl overflow-hidden shadow-lg hover:-translate-y-2 transition duration-300">
+        <img
+          src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b"
+          alt="Sunset Martini"
+          class="w-full h-72 object-cover"
+        />
+        <div class="p-6">
+          <h3 class="text-2xl font-bold">Sunset Martini</h3>
+          <p class="text-gray-400 mt-3">
+            A refreshing blend of vodka, citrus, and tropical flavors.
+          </p>
+          <div class=" flex justify-between items-center mt-4">
+            <span class="inline-block mt-4 text-amber-500 font-bold text-xl">
+            Rs. 1,299
+          </span>
+           <a href="order.html" class= "bg-amber-500 text-white    px-4 py-2 rounded-full">
+              Order Now
+            </a></div>
+        </div>
+      </div>
+
+      <!-- Cocktail 2 -->
+      <div class="bg-zinc-900 rounded-3xl overflow-hidden shadow-lg hover:-translate-y-2 transition duration-300">
+        <img
+          src="https://images.unsplash.com/photo-1470337458703-46ad1756a187"
+          alt="Classic Mojito"
+          class="w-full h-72 object-cover"
+        />
+        <div class="p-6">
+          <h3 class="text-2xl font-bold">Classic Mojito</h3>
+          <p class="text-gray-400 mt-3">
+            Fresh mint, lime, and premium rum for a crisp taste.
+          </p>
+         <div class=" flex justify-between items-center mt-4">
+            <span class="inline-block mt-4 text-amber-500 font-bold text-xl">
+            Rs. 1,299
+          </span>
+           <a href="order.html" class= "bg-amber-500 text-white    px-4 py-2 rounded-full">
+              Order Now
+            </a></div>
+        </div>
+      </div>
+
+      <!-- Cocktail 3 -->
+      <div class="bg-zinc-900 rounded-3xl overflow-hidden shadow-lg hover:-translate-y-2 transition duration-300">
+        <img
+          src="https://images.unsplash.com/photo-1560512823-829485b8bf24"
+          alt="Golden Old Fashioned"
+          class="w-full h-72 object-cover"
+        />
+        <div class="p-6">
+          <h3 class="text-2xl font-bold">Golden Old Fashioned</h3>
+          <p class="text-gray-400 mt-3">
+            A timeless whiskey cocktail with rich and smooth notes.
+          </p>
+          <div class=" flex justify-between items-center mt-4">
+            <span class="inline-block mt-4 text-amber-500 font-bold text-xl">
+            Rs. 1,299
+          </span>
+           <a href="order.html" class= "bg-amber-500 text-white    px-4 py-2 rounded-full">
+              Order Now
+            </a></div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="py-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Heading -->
+    <div class="text-center mb-14">
+      <span class="text-amber-500 uppercase tracking-widest font-semibold">
+        Gallery
+      </span>
+
+      <h2 class="text-4xl md:text-5xl font-bold mt-3">
+        A Glimpse of DivyaShree
+      </h2>
+
+      <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+        Explore our delicious dishes, handcrafted cocktails, elegant interiors,
+        and memorable dining experiences.
+      </p>
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+
+      <img
+        src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4"
+        alt="Restaurant Interior"
+        class="w-full h-56 object-cover rounded-2xl hover:scale-105 transition duration-300 cursor-pointer"
+      >
+
+      <img
+        src="https://images.unsplash.com/photo-1544025162-d76694265947"
+        alt="Steak"
+        class="w-full h-56 object-cover rounded-2xl hover:scale-105 transition duration-300 cursor-pointer"
+      >
+
+      <img
+        src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b"
+        alt="Cocktail"
+        class="w-full h-56 object-cover rounded-2xl hover:scale-105 transition duration-300 cursor-pointer"
+      >
+
+      <img
+        src="https://images.unsplash.com/photo-1559847844-5315695dadae"
+        alt="Burger"
+        class="w-full h-56 object-cover rounded-2xl hover:scale-105 transition duration-300 cursor-pointer"
+      >
+
+      <img
+        src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38"
+        alt="Pizza"
+        class="w-full h-56 object-cover rounded-2xl hover:scale-105 transition duration-300 cursor-pointer"
+      >
+
+      <img
+        src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0"
+        alt="Dining Area"
+        class="w-full h-56 object-cover rounded-2xl hover:scale-105 transition duration-300 cursor-pointer"
+      >
+
+      <img
+        src="https://images.unsplash.com/photo-1559339352-11d035aa65de"
+        alt="Restaurant Food"
+        class="w-full h-56 object-cover rounded-2xl hover:scale-105 transition duration-300 cursor-pointer"
+      >
+
+      <img
+        src="https://images.unsplash.com/photo-1470337458703-46ad1756a187"
+        alt="Bar Drinks"
+        class="w-full h-56 object-cover rounded-2xl hover:scale-105 transition duration-300 cursor-pointer"
+      >
+
+    </div>
+
+    <!-- Button -->
+    <div class="text-center mt-10">
+      <a
+        href="gallery.html"
+        class="inline-block bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-full font-semibold transition"
+      >
+        View Full Gallery
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Heading -->
+    <div class="text-center mb-14">
+      <span class="text-amber-500 uppercase tracking-widest font-semibold">
+        Our Team
+      </span>
+
+      <h2 class="text-4xl md:text-5xl font-bold mt-3">
+        Meet Our Expert Chefs
+      </h2>
+
+      <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+        Passionate culinary professionals dedicated to creating unforgettable
+        dining experiences with creativity, skill, and fresh ingredients.
+      </p>
+    </div>
+
+    <!-- Chef Cards -->
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+      <!-- Chef 1 -->
+      <div class="bg-gray-50 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition">
+        <img
+          src="https://images.unsplash.com/photo-1583394293214-28ded15ee548"
+          alt="Head Chef"
+          class="w-full h-80 object-cover"
+        >
+        <div class="p-6 text-center">
+          <h3 class="text-2xl font-bold">Chef Raj Sharma</h3>
+          <p class="text-amber-500 font-medium mt-2">Executive Chef</p>
+          <p class="text-gray-600 mt-3">
+            15+ years of experience in international and fine dining cuisine.
+          </p>
+        </div>
+      </div>
+
+      <!-- Chef 2 -->
+      <div class="bg-gray-50 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition">
+        <img
+          src="https://images.unsplash.com/photo-1600565193348-f74bd3c7ccdf"
+          alt="Sous Chef"
+          class="w-full h-80 object-cover"
+        >
+        <div class="p-6 text-center">
+          <h3 class="text-2xl font-bold">Chef Priya Karki</h3>
+          <p class="text-amber-500 font-medium mt-2">Sous Chef</p>
+          <p class="text-gray-600 mt-3">
+            Expert in fusion cuisine and signature restaurant specialties.
+          </p>
+        </div>
+      </div>
+
+      <!-- Chef 3 -->
+      <div class="bg-gray-50 rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition">
+        <img
+          src="https://images.unsplash.com/photo-1556157382-97eda2d62296"
+          alt="Pastry Chef"
+          class="w-full h-80 object-cover"
+        >
+        <div class="p-6 text-center">
+          <h3 class="text-2xl font-bold">Chef Aman Thapa</h3>
+          <p class="text-amber-500 font-medium mt-2">Pastry Chef</p>
+          <p class="text-gray-600 mt-3">
+            Specializes in desserts, artisan pastries, and creative sweets.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="py-20 bg-black text-white">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="text-center mb-14">
+      <span class="text-amber-400 uppercase tracking-widest font-semibold">
+        Special Offers
+      </span>
+
+      <h2 class="text-4xl md:text-5xl font-bold mt-3">
+        Exclusive Deals & Promotions
+      </h2>
+
+      <p class="mt-4 text-gray-300 max-w-2xl mx-auto">
+        Enjoy amazing discounts, happy hours, and exclusive dining experiences.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Offer 1 -->
+      <div class="bg-zinc-900 p-8 rounded-3xl border border-zinc-800">
+        <div class="text-5xl mb-4">🍹</div>
+        <h3 class="text-2xl font-bold">Happy Hour</h3>
+        <p class="text-gray-400 mt-3">
+          Get 30% OFF on selected cocktails every day from 5 PM to 7 PM.
+        </p>
+      </div>
+
+      <!-- Offer 2 -->
+      <div class="bg-zinc-900 p-8 rounded-3xl border border-zinc-800">
+        <div class="text-5xl mb-4">🎂</div>
+        <h3 class="text-2xl font-bold">Birthday Special</h3>
+        <p class="text-gray-400 mt-3">
+          Free dessert and complimentary drink for birthday celebrations.
+        </p>
+      </div>
+
+      <!-- Offer 3 -->
+      <div class="bg-zinc-900 p-8 rounded-3xl border border-zinc-800">
+        <div class="text-5xl mb-4">🍽️</div>
+        <h3 class="text-2xl font-bold">Weekend Family Deal</h3>
+        <p class="text-gray-400 mt-3">
+          Buy 3 main courses and get 1 free dessert every weekend.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="text-center mt-12">
+      <a
+        href="#reservation"
+        class="inline-block bg-amber-500 hover:bg-amber-600 text-black font-bold px-8 py-3 rounded-full transition"
+      >
+        Claim Offer Now
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<section class="py-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Heading -->
+    <div class="text-center mb-16">
+      <span class="text-amber-500 uppercase tracking-widest font-semibold">
+        Why Choose Us
+      </span>
+
+      <h2 class="text-4xl md:text-5xl font-bold mt-3">
+        More Than Just Great Food
+      </h2>
+
+      <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+        We combine exceptional cuisine, premium drinks, and outstanding service
+        to create unforgettable dining experiences.
+      </p>
+    </div>
+
+    <!-- Features -->
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+
+      <!-- Feature 1 -->
+      <div class="bg-white p-8 rounded-3xl shadow-lg text-center hover:-translate-y-2 transition">
+        <div class="text-5xl mb-4">🍽️</div>
+        <h3 class="text-xl font-bold mb-3">Fresh Ingredients</h3>
+        <p class="text-gray-600">
+          Every dish is prepared using carefully selected fresh and quality ingredients.
+        </p>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="bg-white p-8 rounded-3xl shadow-lg text-center hover:-translate-y-2 transition">
+        <div class="text-5xl mb-4">👨‍🍳</div>
+        <h3 class="text-xl font-bold mb-3">Expert Chefs</h3>
+        <p class="text-gray-600">
+          Our talented chefs bring years of experience and creativity to every meal.
+        </p>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="bg-white p-8 rounded-3xl shadow-lg text-center hover:-translate-y-2 transition">
+        <div class="text-5xl mb-4">🍹</div>
+        <h3 class="text-xl font-bold mb-3">Premium Bar</h3>
+        <p class="text-gray-600">
+          Enjoy handcrafted cocktails, fine spirits, and refreshing beverages.
+        </p>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="bg-white p-8 rounded-3xl shadow-lg text-center hover:-translate-y-2 transition">
+        <div class="text-5xl mb-4">⭐</div>
+        <h3 class="text-xl font-bold mb-3">Exceptional Service</h3>
+        <p class="text-gray-600">
+          Friendly staff dedicated to making every visit memorable.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="py-20 bg-black text-white">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Heading -->
+    <div class="text-center mb-16">
+      <span class="text-amber-400 uppercase tracking-widest font-semibold">
+        Events & Live Music
+      </span>
+
+      <h2 class="text-4xl md:text-5xl font-bold mt-3">
+        Enjoy Great Food, Drinks & Entertainment
+      </h2>
+
+      <p class="mt-4 text-gray-300 max-w-2xl mx-auto">
+        Join us for unforgettable evenings featuring live music, DJ nights,
+        special events, and exclusive celebrations.
+      </p>
+    </div>
+
+    <!-- Events -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Event 1 -->
+      <div class="bg-zinc-900 rounded-3xl overflow-hidden shadow-lg hover:-translate-y-2 transition">
+        <img
+          src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a"
+          alt="Live Band Night"
+          class="w-full h-64 object-cover"
+        >
+        <div class="p-6">
+          <span class="text-amber-400 font-semibold">
+            Every Friday
+          </span>
+          <h3 class="text-2xl font-bold mt-2">
+            Live Band Night
+          </h3>
+          <p class="text-gray-400 mt-3">
+            Enjoy live performances from talented local bands while dining.
+          </p>
+        </div>
+      </div>
+
+      <!-- Event 2 -->
+      <div class="bg-zinc-900 rounded-3xl overflow-hidden shadow-lg hover:-translate-y-2 transition">
+        <img
+          src="https://images.unsplash.com/photo-1571266028243-d220c9c3b1b7"
+          alt="DJ Night"
+          class="w-full h-64 object-cover"
+        >
+        <div class="p-6">
+          <span class="text-amber-400 font-semibold">
+            Every Saturday
+          </span>
+          <h3 class="text-2xl font-bold mt-2">
+            DJ Party Night
+          </h3>
+          <p class="text-gray-400 mt-3">
+            Dance and celebrate with top DJs, cocktails, and special offers.
+          </p>
+        </div>
+      </div>
+
+      <!-- Event 3 -->
+      <div class="bg-zinc-900 rounded-3xl overflow-hidden shadow-lg hover:-translate-y-2 transition">
+        <img
+          src="https://images.unsplash.com/photo-1511578314322-379afb476865"
+          alt="Private Events"
+          class="w-full h-64 object-cover"
+        >
+        <div class="p-6">
+          <span class="text-amber-400 font-semibold">
+            Available Anytime
+          </span>
+          <h3 class="text-2xl font-bold mt-2">
+            Private Celebrations
+          </h3>
+          <p class="text-gray-400 mt-3">
+            Host birthdays, anniversaries, corporate events, and gatherings.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center mt-12">
+      <a
+        href="#reservation"
+        class="inline-block bg-amber-500 hover:bg-amber-600 text-black font-semibold px-8 py-3 rounded-full transition"
+      >
+        Reserve Your Spot
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<section id="reservation" class="relative py-20 bg-black text-white">
+
+  <!-- Background -->
+  <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0')] bg-cover bg-center"></div>
+  <div class="absolute inset-0 bg-black/70"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6">
+
+    <!-- Header -->
+    <div class="text-center mb-14">
+      <span class="text-amber-400 uppercase tracking-widest font-semibold">
+        Book Your Table
+      </span>
+
+      <h2 class="text-4xl md:text-5xl font-bold mt-3">
+        Reserve Your <span class="text-amber-400">Evening</span> with Us
+      </h2>
+
+      <p class="text-gray-300 mt-4 max-w-2xl mx-auto">
+        Whether it's an intimate dinner or a group celebration, we make every moment special.
+        Book ahead — weekends fill quickly.
+      </p>
+    </div>
+
+    <!-- Content Grid -->
+    <div class="grid lg:grid-cols-2 gap-10 items-start">
+
+      <!-- LEFT INFO -->
+      <div class="bg-black/40 backdrop-blur-md border border-white/10 rounded-2xl p-8">
+
+        <h3 class="text-2xl font-bold text-amber-400 mb-6">Opening Hours</h3>
+
+        <div class="space-y-4 text-gray-200">
+
+          <div class="flex justify-between border-b border-white/10 pb-3">
+            <span>Monday – Friday</span>
+            <span class="text-white">10 AM – 11 PM</span>
+          </div>
+
+          <div class="flex justify-between border-b border-white/10 pb-3">
+            <span>Saturday</span>
+            <span class="text-white">9 AM – 12 AM</span>
+          </div>
+
+          <div class="flex justify-between">
+            <span>Sunday</span>
+            <span class="text-white">9 AM – 10 PM</span>
+          </div>
+
+        </div>
+
+        <div class="mt-8 p-5 bg-amber-500/10 border border-amber-400/30 rounded-xl">
+          <p class="text-sm text-gray-300">
+            💡 Tip: Weekends are busy — we recommend booking at least 1–2 days in advance.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- RIGHT FORM -->
+      <div class="bg-black/40 backdrop-blur-md border border-white/10 rounded-2xl p-8">
+
+        <h3 class="text-2xl font-bold mb-1">Make a Reservation</h3>
+        <p class="text-gray-400 text-sm mb-6">We’ll confirm within 2 hours</p>
+
+        <form class="space-y-4">
+
+          <!-- Name -->
+          <div class="grid md:grid-cols-2 gap-4">
+            <input type="text" placeholder="First Name"
+              class="w-full p-3 rounded-lg bg-black/50 border border-white/10 focus:border-amber-400 outline-none">
+
+            <input type="text" placeholder="Last Name"
+              class="w-full p-3 rounded-lg bg-black/50 border border-white/10 focus:border-amber-400 outline-none">
+          </div>
+
+          <!-- Date Time -->
+          <div class="grid md:grid-cols-2 gap-4">
+            <input type="date"
+              class="w-full p-3 rounded-lg bg-black/50 border border-white/10 focus:border-amber-400 outline-none">
+
+            <input type="time"
+              class="w-full p-3 rounded-lg bg-black/50 border border-white/10 focus:border-amber-400 outline-none">
+          </div>
+
+          <!-- Guests + Occasion -->
+          <div class="grid md:grid-cols-2 gap-4">
+            <select class="w-full p-3 rounded-lg bg-black/50 border border-white/10 focus:border-amber-400 outline-none">
+              <option>1 Guest</option>
+              <option>2 Guests</option>
+              <option>3 Guests</option>
+              <option>4 Guests</option>
+              <option>5–8 Guests</option>
+              <option>9+ Guests</option>
+            </select>
+
+            <select class="w-full p-3 rounded-lg bg-black/50 border border-white/10 focus:border-amber-400 outline-none">
+              <option>Just Dining</option>
+              <option>Birthday</option>
+              <option>Anniversary</option>
+              <option>Business Dinner</option>
+            </select>
+          </div>
+
+          <!-- Phone -->
+          <input type="tel" placeholder="Phone Number"
+            class="w-full p-3 rounded-lg bg-black/50 border border-white/10 focus:border-amber-400 outline-none">
+
+          <!-- Requests -->
+          <textarea rows="4" placeholder="Special requests..."
+            class="w-full p-3 rounded-lg bg-black/50 border border-white/10 focus:border-amber-400 outline-none"></textarea>
+
+          <!-- Button -->
+          <button type="button"
+            onclick="alert('Reservation received! We will confirm soon.')"
+            class="w-full bg-amber-500 hover:bg-amber-600 text-black font-bold py-3 rounded-lg transition">
+            Confirm Reservation
+          </button>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="bg-black text-gray-300">
+  <div class="max-w-7xl mx-auto px-6 py-16">
+
+    <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+
+      <!-- Restaurant Info -->
+      <div>
+        <h2 class="text-3xl font-extrabold text-amber-400 mb-4">
+          DivyaShree
+        </h2>
+
+        <p class="leading-7">
+          Experience delicious cuisine, premium cocktails, and exceptional
+          hospitality in a warm and elegant atmosphere.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-white text-xl font-semibold mb-4">
+          Quick Links
+        </h3>
+
+        <ul class="space-y-3">
+          <li><a href="#" class="hover:text-amber-400 transition">Home</a></li>
+          <li><a href="#" class="hover:text-amber-400 transition">Menu</a></li>
+          <li><a href="#" class="hover:text-amber-400 transition">Gallery</a></li>
+          <li><a href="#" class="hover:text-amber-400 transition">About Us</a></li>
+          <li><a href="#" class="hover:text-amber-400 transition">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Opening Hours -->
+      <div>
+        <h3 class="text-white text-xl font-semibold mb-4">
+          Opening Hours
+        </h3>
+
+        <ul class="space-y-3 text-gray-300">
+
+  <li class="flex justify-between border-b border-white/10 pb-2">
+    <span>Monday - Friday</span>
+    <span class="text-white">10 AM - 11 PM</span>
+  </li>
+
+  <li class="flex justify-between border-b border-white/10 pb-2">
+    <span>Saturday</span>
+    <span class="text-white">9 AM - 12 AM</span>
+  </li>
+
+  <li class="flex justify-between border-b border-white/10 pb-2">
+    <span>Sunday</span>
+    <span class="text-white">9 AM - 10 PM</span>
+  </li>
+
+  <!-- Highlighted special item -->
+  <li class="mt-4 p-3 bg-amber-500/10 border border-amber-400/30 rounded-lg flex justify-between items-center">
+    <span class="font-medium text-amber-400">Happy Hour</span>
+    <span class="text-white font-semibold">5 – 7 PM daily</span>
+  </li>
+
+</ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h3 class="text-white text-xl font-semibold mb-4">
+          Contact Us
+        </h3>
+
+        <ul class="space-y-3">
+          <li>📍 Kathmandu, Nepal</li>
+          <li>📞 +977 98XXXXXXXX</li>
+          <li>✉️ info@divyashree.com</li>
+        </ul>
+
+        <!-- Social Icons -->
+        <div class="flex gap-4 mt-6">
+          <a href="#" class="hover:text-amber-400 transition"><i class="fa-brands fa-facebook text-2xl"></i></a>
+          <a href="#" class="hover:text-amber-400 transition"><i class="fa-brands fa-square-instagram text-2xl"></i></a>
+          <a href="#" class="hover:text-amber-400 transition"><i class="fa-brands fa-tiktok text-2xl"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Footer -->
+    <div class="border-t border-gray-800 mt-12 pt-6 text-center">
+      <p>
+        © 2026 DivyaShree Restaurant & Bar. All Rights Reserved.
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const closeBtn = document.getElementById("closeBtn");
+  const overlay = document.getElementById("overlay");
+
+  function openMenu() {
+    mobileMenu.classList.remove("-translate-x-full");
+    mobileMenu.classList.add("translate-x-0");
+    overlay.classList.remove("hidden");
+  }
+
+  function closeMenu() {
+    mobileMenu.classList.add("-translate-x-full");
+    mobileMenu.classList.remove("translate-x-0");
+    overlay.classList.add("hidden");
+  }
+
+  menuBtn.addEventListener("click", openMenu);
+  closeBtn.addEventListener("click", closeMenu);
+  overlay.addEventListener("click", closeMenu);
+</script>
+
+</body>
+</html>

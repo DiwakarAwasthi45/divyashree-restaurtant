@@ -1,0 +1,338 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Table - DivyaShree</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+</head>
+
+<body class="bg-white text-white">
+<!-- Top Header -->
+<div class="hidden md:block bg-amber-600 text-white">
+  <div class="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center text-sm">
+    <div class="flex items-center gap-6">
+      <span>📞 +977 98XXXXXXXX</span>
+      <span>📧 info@divyashree.com</span>
+    </div>
+
+    <div class="flex items-center gap-6">
+      <span>🕒 Open Daily: 10 AM - 11 PM</span>
+      <span>📍 Kathmandu, Nepal</span>
+    </div>
+  </div>
+</div>
+
+<!-- Main Navbar -->
+<header class="sticky top-0 z-50 bg-black/95 backdrop-blur-md border-b border-gray-800">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex items-center justify-between h-20">
+
+      <!-- Logo -->
+      <a href="/" class="text-3xl font-extrabold tracking-wide">
+        <span class="text-white">Divya</span>
+        <span class="text-amber-400">Shree</span>
+      </a>
+
+      <!-- Desktop Menu -->
+      <nav class=" hidden lg:block">
+        <ul class="flex items-center gap-8 font-medium">
+          <li><a href="index.html" class="hover:text-amber-400 transition text-white">Home</a></li>
+          <li><a href="menu.html" class="hover:text-amber-400 transition text-white">Menu</a></li>
+          <li><a href="bar.html" class="hover:text-amber-400 transition text-white">Bar</a></li>
+          <li><a href="gallery.html" class="hover:text-amber-400 transition text-white">Gallery</a></li>
+          <li><a href="booking.html" class="hover:text-amber-400 transition text-white">Book Table</a></li>
+          <li><a href="blog.html" class="hover:text-amber-400 transition text-white">Blog</a></li>
+          <li><a href="about.html" class="hover:text-amber-400 transition text-white">About</a></li>
+          <li><a href="contact.html" class="hover:text-amber-400 transition text-white">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right Side -->
+      <div class="flex items-center gap-4">
+
+        <!-- CTA Button -->
+        <a
+          href="booking.html"
+          class="hidden sm:flex bg-amber-500 hover:bg-amber-600 px-5 py-2.5 rounded-full font-semibold text-black transition"
+        >
+          Reserve Now
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button id="menuBtn" class="lg:hidden text-white">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Menu -->
+<div id="mobileMenu"
+  class="fixed top-0 left-1 h-full w-72 bg-black text-white border-r border-gray-800
+         transform -translate-x-full transition-transform duration-300 ease-in-out lg:hidden z-50">
+
+  <div class="p-6 border-b border-gray-800 flex justify-between items-center">
+    <h2 class="text-amber-400 font-bold text-xl">Menu</h2>
+
+    <button id="closeBtn" class="text-white text-2xl">
+      ✖
+    </button>
+  </div>
+
+  <ul class="flex flex-col p-6 space-y-5 font-medium">
+    <li><a href="index.html" class="hover:text-amber-400">Home</a></li>
+    <li><a href="menu.html" class="hover:text-amber-400">Menu</a></li>
+    <li><a href="bar.html" class="hover:text-amber-400">Bar</a></li>
+    <li><a href="gallery.html" class="hover:text-amber-400">Gallery</a></li>
+    <li><a href="booking.html" class="hover:text-amber-400">Book Table</a></li>
+    <li><a href="blog.html" class="hover:text-amber-400">Blog</a></li>
+    <li><a href="about.html" class="hover:text-amber-400">About</a></li>
+    <li><a href="contact.html" class="hover:text-amber-400">Contact</a></li>
+  </ul>
+</div>
+<!-- HERO -->
+<section class="relative h-[50vh] flex items-center justify-center">
+  <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0')] bg-cover bg-center"></div>
+  <div class="absolute inset-0 bg-black/70"></div>
+
+  <div class="relative text-center px-6">
+    <h1 class="text-5xl font-bold text-amber-400">Book a Table</h1>
+    <p class="mt-4 text-gray-300">Reserve your perfect dining experience</p>
+  </div>
+</section>
+
+<!-- BOOKING SECTION -->
+<section class="py-20">
+  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12">
+
+    <!-- INFO -->
+    <div class="space-y-6">
+
+      <div>
+        <h2 class="text-4xl font-bold">
+          Reserve Your <span class="text-amber-400">Evening</span>
+        </h2>
+        <p class="text-gray-400 mt-4 leading-7">
+          Book your table in advance and enjoy a seamless dining experience at DivyaShree Restaurant & Bar.
+          We ensure comfort, taste, and unforgettable memories.
+        </p>
+      </div>
+
+      <div class="bg-zinc-900 p-6 rounded-2xl">
+        <h3 class="text-amber-400 font-bold mb-4">Opening Hours</h3>
+
+        <div class="space-y-3 text-gray-300">
+          <div class="flex justify-between border-b border-white/10 pb-2">
+            <span>Mon - Fri</span>
+            <span>10 AM - 11 PM</span>
+          </div>
+          <div class="flex justify-between border-b border-white/10 pb-2">
+            <span>Saturday</span>
+            <span>9 AM - 12 AM</span>
+          </div>
+          <div class="flex justify-between">
+            <span>Sunday</span>
+            <span>9 AM - 10 PM</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-amber-500/10 border border-amber-400/30 p-5 rounded-xl text-gray-300">
+        💡 Tip: Weekends are busy — book at least 24 hours in advance.
+      </div>
+
+    </div>
+
+    <!-- FORM -->
+    <div class="bg-zinc-900 p-8 rounded-2xl">
+
+      <h3 class="text-3xl font-bold mb-6">
+        Make a <span class="text-amber-400">Reservation</span>
+      </h3>
+
+      <form class="space-y-4">
+
+        <div class="grid md:grid-cols-2 gap-4">
+          <input type="text" placeholder="First Name"
+            class="p-3 rounded-lg bg-black border border-white/10 focus:border-amber-400 outline-none">
+
+          <input type="text" placeholder="Last Name"
+            class="p-3 rounded-lg bg-black border border-white/10 focus:border-amber-400 outline-none">
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-4">
+          <input type="date"
+            class="p-3 rounded-lg bg-black border border-white/10 focus:border-amber-400 outline-none">
+
+          <input type="time"
+            class="p-3 rounded-lg bg-black border border-white/10 focus:border-amber-400 outline-none">
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-4">
+          <select class="p-3 rounded-lg bg-black border border-white/10 focus:border-amber-400 outline-none">
+            <option>1 Guest</option>
+            <option>2 Guests</option>
+            <option>3 Guests</option>
+            <option>4 Guests</option>
+            <option>5–8 Guests</option>
+            <option>9+ Guests</option>
+          </select>
+
+          <select class="p-3 rounded-lg bg-black border border-white/10 focus:border-amber-400 outline-none">
+            <option>Dining</option>
+            <option>Birthday</option>
+            <option>Anniversary</option>
+            <option>Business Meeting</option>
+          </select>
+        </div>
+
+        <input type="tel" placeholder="Phone Number"
+          class="p-3 w-full rounded-lg bg-black border border-white/10 focus:border-amber-400 outline-none">
+
+        <textarea rows="4" placeholder="Special Requests"
+          class="p-3 w-full rounded-lg bg-black border border-white/10 focus:border-amber-400 outline-none"></textarea>
+
+        <button type="button"
+          onclick="alert('Reservation submitted successfully!')"
+          class="w-full bg-amber-500 hover:bg-amber-600 text-black font-bold py-3 rounded-lg transition">
+          Confirm Booking
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+</section>
+
+
+<footer class="bg-black text-gray-300">
+  <div class="max-w-7xl mx-auto px-6 py-16">
+
+    <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+
+      <!-- Restaurant Info -->
+      <div>
+        <h2 class="text-3xl font-extrabold text-amber-400 mb-4">
+          DivyaShree
+        </h2>
+
+        <p class="leading-7">
+          Experience delicious cuisine, premium cocktails, and exceptional
+          hospitality in a warm and elegant atmosphere.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-white text-xl font-semibold mb-4">
+          Quick Links
+        </h3>
+
+        <ul class="space-y-3">
+          <li><a href="#" class="hover:text-amber-400 transition">Home</a></li>
+          <li><a href="#" class="hover:text-amber-400 transition">Menu</a></li>
+          <li><a href="#" class="hover:text-amber-400 transition">Gallery</a></li>
+          <li><a href="#" class="hover:text-amber-400 transition">About Us</a></li>
+          <li><a href="#" class="hover:text-amber-400 transition">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Opening Hours -->
+      <div>
+        <h3 class="text-white text-xl font-semibold mb-4">
+          Opening Hours
+        </h3>
+
+        <ul class="space-y-3 text-gray-300">
+
+  <li class="flex justify-between border-b border-white/10 pb-2">
+    <span>Monday - Friday</span>
+    <span class="text-white">10 AM - 11 PM</span>
+  </li>
+
+  <li class="flex justify-between border-b border-white/10 pb-2">
+    <span>Saturday</span>
+    <span class="text-white">9 AM - 12 AM</span>
+  </li>
+
+  <li class="flex justify-between border-b border-white/10 pb-2">
+    <span>Sunday</span>
+    <span class="text-white">9 AM - 10 PM</span>
+  </li>
+
+  <!-- Highlighted special item -->
+  <li class="mt-4 p-3 bg-amber-500/10 border border-amber-400/30 rounded-lg flex justify-between items-center">
+    <span class="font-medium text-amber-400">Happy Hour</span>
+    <span class="text-white font-semibold">5 – 7 PM daily</span>
+  </li>
+
+</ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h3 class="text-white text-xl font-semibold mb-4">
+          Contact Us
+        </h3>
+
+        <ul class="space-y-3">
+          <li>📍 Kathmandu, Nepal</li>
+          <li>📞 +977 98XXXXXXXX</li>
+          <li>✉️ info@divyashree.com</li>
+        </ul>
+
+        <!-- Social Icons -->
+        <div class="flex gap-4 mt-6">
+          <a href="#" class="hover:text-amber-400 transition"><i class="fa-brands fa-facebook text-2xl"></i></a>
+          <a href="#" class="hover:text-amber-400 transition"><i class="fa-brands fa-square-instagram text-2xl"></i></a>
+          <a href="#" class="hover:text-amber-400 transition"><i class="fa-brands fa-tiktok text-2xl"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Footer -->
+    <div class="border-t border-gray-800 mt-12 pt-6 text-center">
+      <p>
+        © 2026 DivyaShree Restaurant & Bar. All Rights Reserved.
+      </p>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const closeBtn = document.getElementById("closeBtn");
+  const overlay = document.getElementById("overlay");
+
+  function openMenu() {
+    mobileMenu.classList.remove("-translate-x-full");
+    mobileMenu.classList.add("translate-x-0");
+    overlay.classList.remove("hidden");
+  }
+
+  function closeMenu() {
+    mobileMenu.classList.add("-translate-x-full");
+    mobileMenu.classList.remove("translate-x-0");
+    overlay.classList.add("hidden");
+  }
+
+  menuBtn.addEventListener("click", openMenu);
+  closeBtn.addEventListener("click", closeMenu);
+  overlay.addEventListener("click", closeMenu);
+</script>
+
+
+</body>
+</html>
