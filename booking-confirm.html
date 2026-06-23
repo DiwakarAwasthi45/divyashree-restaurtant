@@ -1,19 +1,16 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Book Table - DivyaShree</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Confirmed - DivyaShree</title>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+<body>
 
-</head>
-
-<body class="bg-white text-white">
-<!-- Top Header -->
+     <!-- Top Header -->
 <div class="hidden md:block bg-amber-600 text-white">
   <div class="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center text-sm">
     <div class="flex items-center gap-6">
@@ -98,122 +95,41 @@
     <li><a href="contact.html" class="hover:text-amber-400">Contact</a></li>
   </ul>
 </div>
-<!-- HERO -->
-<section class="relative h-[50vh] flex items-center justify-center">
-  <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0')] bg-cover bg-center"></div>
-  <div class="absolute inset-0 bg-black/70"></div>
 
-  <div class="relative text-center px-6">
-    <h1 class="text-5xl font-bold text-amber-400">Book a Table</h1>
-    <p class="mt-4 text-gray-300">Reserve your perfect dining experience</p>
-  </div>
-</section>
+<section class="min-h-[70vh] flex items-center justify-center px-6 py-20">
+  <div class="bg-zinc-900 p-10 rounded-2xl text-center max-w-md w-full shadow-xl border border-zinc-800">
 
-<!-- BOOKING SECTION -->
-<section class="py-20">
-  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12">
+    <div class="text-7xl mb-4">✅</div>
 
-    <!-- INFO -->
-    <div class="space-y-6">
+    <h1 class="text-3xl font-bold text-amber-400 mb-4">
+      Booking Confirmed!
+    </h1>
 
-      <div>
-        <h2 class="text-4xl font-bold">
-          Reserve Your <span class="text-amber-400">Evening</span>
-        </h2>
-        <p class="text-black mt-4 leading-7">
-          Book your table in advance and enjoy a seamless dining experience at DivyaShree Restaurant & Bar.
-          We ensure comfort, taste, and unforgettable memories.
-        </p>
-      </div>
+    <p class="text-gray-300 mb-6 leading-relaxed">
+      Thank you for choosing DivyaShree Restaurant & Bar.
+      Your reservation request has been successfully received.
+      We will contact you shortly to confirm your booking details.
+    </p>
 
-      <div class="bg-zinc-900 p-6 rounded-2xl">
-        <h3 class="text-amber-400 font-bold mb-4">Opening Hours</h3>
-
-        <div class="space-y-3 text-gray-300">
-          <div class="flex justify-between border-b border-white/10 pb-2">
-            <span>Mon - Fri</span>
-            <span>10 AM - 11 PM</span>
-          </div>
-          <div class="flex justify-between border-b border-white/10 pb-2">
-            <span>Saturday</span>
-            <span>9 AM - 12 AM</span>
-          </div>
-          <div class="flex justify-between">
-            <span>Sunday</span>
-            <span>9 AM - 10 PM</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="bg-amber-500/10 border border-amber-400/30 p-5 rounded-xl text-black">
-        💡 Tip: Weekends are busy — book at least 24 hours in advance.
-      </div>
-
+    <div class="bg-black rounded-lg p-4 mb-6 border border-zinc-800">
+      <p class="text-gray-400 text-sm">Reservation Status</p>
+      <p class="text-green-400 font-bold text-lg">Confirmed</p>
     </div>
 
-    <!-- FORM -->
-    <div class="bg-zinc-900 p-8 rounded-2xl">
+    <div class="space-y-3">
+      <a href="index.html"
+        class="block w-full bg-amber-500 hover:bg-amber-600 text-black font-bold py-3 rounded-lg transition">
+        Back to Home
+      </a>
 
-      <h3 class="text-3xl font-bold mb-6">
-        Make a <span class="text-amber-400">Reservation</span>
-      </h3>
-
-      <form class="space-y-4">
-
-        <div class="grid md:grid-cols-2 gap-4">
-          <input type="text" placeholder="First Name"
-            class="p-3 rounded-lg bg-black border border-white/10 focus:border-amber-400 outline-none">
-
-          <input type="text" placeholder="Last Name"
-            class="p-3 rounded-lg bg-black border border-white/10 focus:border-amber-400 outline-none">
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-4">
-          <input type="date"
-            class="p-3 rounded-lg bg-black border border-white/10 focus:border-amber-400 outline-none">
-
-          <input type="time"
-            class="p-3 rounded-lg bg-black border border-white/10 focus:border-amber-400 outline-none">
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-4">
-          <select class="p-3 rounded-lg bg-black border border-white/10 focus:border-amber-400 outline-none">
-            <option>1 Guest</option>
-            <option>2 Guests</option>
-            <option>3 Guests</option>
-            <option>4 Guests</option>
-            <option>5–8 Guests</option>
-            <option>9+ Guests</option>
-          </select>
-
-          <select class="p-3 rounded-lg bg-black border border-white/10 focus:border-amber-400 outline-none">
-            <option>Dining</option>
-            <option>Birthday</option>
-            <option>Anniversary</option>
-            <option>Business Meeting</option>
-          </select>
-        </div>
-
-        <input type="tel" placeholder="Phone Number"
-          class="p-3 w-full rounded-lg bg-black border border-white/10 focus:border-amber-400 outline-none">
-
-        <textarea rows="4" placeholder="Special Requests"
-          class="p-3 w-full rounded-lg bg-black border border-white/10 focus:border-amber-400 outline-none"></textarea>
-
-       <button
-  type="button"
-  onclick="alert('Reservation submitted successfully!'); window.location.href='booking-confirm.html';"
-  class="w-full bg-amber-500 hover:bg-amber-600 text-black font-bold py-3 rounded-lg transition">
-  Confirm Booking
-</button>
-
-      </form>
-
+      <a href="menu.html"
+        class="block w-full border border-amber-500 text-amber-400 hover:bg-amber-500 hover:text-black py-3 rounded-lg transition">
+        View Menu
+      </a>
     </div>
 
   </div>
 </section>
-
 
 <footer class="bg-black text-gray-300">
   <div class="max-w-7xl mx-auto px-6 py-16">
@@ -333,7 +249,6 @@
   closeBtn.addEventListener("click", closeMenu);
   overlay.addEventListener("click", closeMenu);
 </script>
-
 
 </body>
 </html>
