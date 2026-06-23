@@ -5,13 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Bar Menu</title>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-   integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
 </head>
 
 <body class="bg-white text-white">
 
-<!-- Top Header -->
+ <!-- Top Header -->
 <div class="hidden md:block bg-amber-600 text-white">
   <div class="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center text-sm">
     <div class="flex items-center gap-6">
@@ -97,11 +96,10 @@
   </ul>
 </div>
 
-
 <!-- HERO -->
 <section class="relative h-[60vh] flex items-center justify-center">
   <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1470337458703-46ad1756a187')] bg-cover bg-center"></div>
-  <div class="absolute inset-0 bg-transparent/70"></div>
+  <div class="absolute inset-0 bg-black/60"></div>
 
   <div class="relative text-center px-6">
     <h1 class="text-5xl font-bold text-amber-400">Bar Menu</h1>
@@ -112,148 +110,150 @@
 <!-- CATEGORY -->
 <section class="py-10 text-center">
   <div class="flex flex-wrap justify-center gap-4">
-    <span class="bg-amber-500 text-black px-4 py-2 rounded-full">Cocktails</span>
-    <span class="bg-zinc-800 px-4 py-2 rounded-full">Mocktails</span>
-    <span class="bg-zinc-800 px-4 py-2 rounded-full">Whiskey</span>
-    <span class="bg-zinc-800 px-4 py-2 rounded-full">Beer</span>
+
+    <button class="filter-btn bg-amber-500 text-black px-4 py-2 rounded-full" data-filter="all">All</button>
+    <button class="filter-btn bg-zinc-800 px-4 py-2 rounded-full" data-filter="cocktail">Cocktails</button>
+    <button class="filter-btn bg-zinc-800 px-4 py-2 rounded-full" data-filter="mocktail">Mocktails</button>
+    <button class="filter-btn bg-zinc-800 px-4 py-2 rounded-full" data-filter="whiskey">Whiskey</button>
+    <button class="filter-btn bg-zinc-800 px-4 py-2 rounded-full" data-filter="beer">Beer</button>
+
   </div>
 </section>
 
-<!-- DRINK GRID -->
-<section class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- GRID (10 ITEMS) -->
+<section class="max-w-7xl mx-auto px-6 pb-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
   <!-- 1 -->
-  <div class="bg-zinc-900 rounded-2xl overflow-hidden">
+  <div class="drink-card bg-zinc-900 rounded-2xl overflow-hidden" data-category="cocktail">
     <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b" class="h-48 w-full object-cover">
     <div class="p-5">
       <h2 class="text-xl font-bold">Sunset Martini</h2>
-      <p class="text-gray-400 text-sm mt-2">Citrus vodka blend</p>
+      <p class="text-gray-400 text-sm">Citrus vodka blend</p>
       <div class="flex justify-between mt-4">
         <span class="text-amber-400 font-bold">Rs. 650</span>
-        <a href="order.html" class="bg-amber-500 text-black px-3 py-1 rounded-full">Order</a>
+        <a href="#" class="bg-amber-500 text-black px-3 py-1 rounded-full">Order</a>
       </div>
     </div>
   </div>
 
   <!-- 2 -->
-  <div class="bg-zinc-900 rounded-2xl overflow-hidden">
+  <div class="drink-card bg-zinc-900 rounded-2xl overflow-hidden" data-category="mocktail">
     <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187" class="h-48 w-full object-cover">
     <div class="p-5">
       <h2 class="text-xl font-bold">Classic Mojito</h2>
-      <p class="text-gray-400 text-sm mt-2">Mint & lime refresh</p>
+      <p class="text-gray-400 text-sm">Mint & lime refresh</p>
       <div class="flex justify-between mt-4">
         <span class="text-amber-400 font-bold">Rs. 550</span>
-        <button class="bg-amber-500 text-black px-3 py-1 rounded-full">Order</button>
+        <a href="#" class="bg-amber-500 text-black px-3 py-1 rounded-full">Order</a>
       </div>
     </div>
   </div>
 
   <!-- 3 -->
-  <div class="bg-zinc-900 rounded-2xl overflow-hidden">
+  <div class="drink-card bg-zinc-900 rounded-2xl overflow-hidden" data-category="whiskey">
     <img src="https://images.unsplash.com/photo-1560512823-829485b8bf24" class="h-48 w-full object-cover">
     <div class="p-5">
       <h2 class="text-xl font-bold">Old Fashioned</h2>
-      <p class="text-gray-400 text-sm mt-2">Whiskey classic mix</p>
+      <p class="text-gray-400 text-sm">Whiskey classic mix</p>
       <div class="flex justify-between mt-4">
         <span class="text-amber-400 font-bold">Rs. 750</span>
-        <a href="order.html" class="bg-amber-500 text-black px-3 py-1 rounded-full">Order</a>
+        <a href="#" class="bg-amber-500 text-black px-3 py-1 rounded-full">Order</a>
       </div>
     </div>
   </div>
 
   <!-- 4 -->
-  <div class="bg-zinc-900 rounded-2xl overflow-hidden">
+  <div class="drink-card bg-zinc-900 rounded-2xl overflow-hidden" data-category="cocktail">
     <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87" class="h-48 w-full object-cover">
     <div class="p-5">
       <h2 class="text-xl font-bold">Blue Lagoon</h2>
-      <p class="text-gray-400 text-sm mt-2">Blue curacao refresh</p>
+      <p class="text-gray-400 text-sm">Blue curaçao refresh</p>
       <div class="flex justify-between mt-4">
         <span class="text-amber-400 font-bold">Rs. 600</span>
-        <a href="order.html" class="bg-amber-500 text-black px-3 py-1 rounded-full">Order</a>
+        <a href="#" class="bg-amber-500 text-black px-3 py-1 rounded-full">Order</a>
       </div>
     </div>
   </div>
 
   <!-- 5 -->
-  <div class="bg-zinc-900 rounded-2xl overflow-hidden">
-    <img src="https://images.unsplash.com/photo-1528825871115-3581a5387919" class="h-48 w-full object-cover">
+  <div class="drink-card bg-zinc-900 rounded-2xl overflow-hidden" data-category="beer">
+    <img src="https://cdn.ecommercedns.uk/files/2/241162/2/42811062/10274.png" class="h-48 w-full object-cover">
     <div class="p-5">
-      <h2 class="text-xl font-bold">Tequila Sunrise</h2>
-      <p class="text-gray-400 text-sm mt-2">Orange sunrise mix</p>
+      <h2 class="text-xl font-bold">Beer Bucket</h2>
+      <p class="text-gray-400 text-sm">Chilled imported beers</p>
       <div class="flex justify-between mt-4">
-        <span class="text-amber-400 font-bold">Rs. 700</span>
-        <a href="order.html" class="bg-amber-500 text-black px-3 py-1 rounded-full">Order</a>
+        <span class="text-amber-400 font-bold">Rs. 1200</span>
+        <a href="#" class="bg-amber-500 text-black px-3 py-1 rounded-full">Order</a>
       </div>
     </div>
   </div>
 
   <!-- 6 -->
-  <div class="bg-zinc-900 rounded-2xl overflow-hidden">
-    <img src="https://images.unsplash.com/photo-1536935338788-846bb9981813" class="h-48 w-full object-cover">
+  <div class="drink-card bg-zinc-900 rounded-2xl overflow-hidden" data-category="cocktail">
+    <img src="https://images.unsplash.com/photo-1528825871115-3581a5387919" class="h-48 w-full object-cover">
     <div class="p-5">
-      <h2 class="text-xl font-bold">Mocktail Special</h2>
-      <p class="text-gray-400 text-sm mt-2">Non-alcoholic fruit mix</p>
+      <h2 class="text-xl font-bold">Tequila Sunrise</h2>
+      <p class="text-gray-400 text-sm">Orange sunrise mix</p>
       <div class="flex justify-between mt-4">
-        <span class="text-amber-400 font-bold">Rs. 400</span>
-        <a href="" class="bg-amber-500 text-black px-3 py-1 rounded-full">Order</a>
+        <span class="text-amber-400 font-bold">Rs. 700</span>
+        <a href="#" class="bg-amber-500 text-black px-3 py-1 rounded-full">Order</a>
       </div>
     </div>
   </div>
 
   <!-- 7 -->
-  <div class="bg-zinc-900 rounded-2xl overflow-hidden">
-    <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e" class="h-48 w-full object-cover">
+  <div class="drink-card bg-zinc-900 rounded-2xl overflow-hidden" data-category="mocktail">
+    <img src="https://images.unsplash.com/photo-1536935338788-846bb9981813" class="h-48 w-full object-cover">
     <div class="p-5">
-      <h2 class="text-xl font-bold">Whiskey Sour</h2>
-      <p class="text-gray-400 text-sm mt-2">Citrus whiskey blend</p>
+      <h2 class="text-xl font-bold">Fruit Punch</h2>
+      <p class="text-gray-400 text-sm">Fresh non-alcoholic mix</p>
       <div class="flex justify-between mt-4">
-        <span class="text-amber-400 font-bold">Rs. 680</span>
-        <a href="order.html" class="bg-amber-500 text-black px-3 py-1 rounded-full">Order</a>
+        <span class="text-amber-400 font-bold">Rs. 400</span>
+        <a href="#" class="bg-amber-500 text-black px-3 py-1 rounded-full">Order</a>
       </div>
     </div>
   </div>
 
   <!-- 8 -->
-  <div class="bg-zinc-900 rounded-2xl overflow-hidden">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH0ZKgp-pT7Odkd4f6u-QA1GGqwbAn5P_rv5_16ORQSQ6aw4CLfhDRmcKz&s=10" class="h-48 w-full object-cover">
+  <div class="drink-card bg-zinc-900 rounded-2xl overflow-hidden" data-category="whiskey">
+    <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e" class="h-48 w-full object-cover">
     <div class="p-5">
-      <h2 class="text-xl font-bold">Beer Bucket</h2>
-      <p class="text-gray-400 text-sm mt-2">Chilled imported beers</p>
+      <h2 class="text-xl font-bold">Whiskey Sour</h2>
+      <p class="text-gray-400 text-sm">Citrus whiskey blend</p>
       <div class="flex justify-between mt-4">
-        <span class="text-amber-400 font-bold">Rs. 1200</span>
-        <a href="order.html" class="bg-amber-500 text-black px-3 py-1 rounded-full">Order</a>
+        <span class="text-amber-400 font-bold">Rs. 680</span>
+        <a href="#" class="bg-amber-500 text-black px-3 py-1 rounded-full">Order</a>
       </div>
     </div>
   </div>
 
   <!-- 9 -->
-  <div class="bg-zinc-900 rounded-2xl overflow-hidden">
+  <div class="drink-card bg-zinc-900 rounded-2xl overflow-hidden" data-category="beer">
     <img src="https://images.unsplash.com/photo-1525610553991-2bede1a236e2" class="h-48 w-full object-cover">
     <div class="p-5">
-      <h2 class="text-xl font-bold">Gin Tonic</h2>
-      <p class="text-gray-400 text-sm mt-2">Fresh lime tonic mix</p>
+      <h2 class="text-xl font-bold">Premium Beer</h2>
+      <p class="text-gray-400 text-sm">Imported chilled beer</p>
       <div class="flex justify-between mt-4">
-        <span class="text-amber-400 font-bold">Rs. 620</span>
-        <a href="" class="bg-amber-500 text-black px-3 py-1 rounded-full">Order</a>
+        <span class="text-amber-400 font-bold">Rs. 500</span>
+        <a href="#" class="bg-amber-500 text-black px-3 py-1 rounded-full">Order</a>
       </div>
     </div>
   </div>
 
   <!-- 10 -->
-  <div class="bg-zinc-900 rounded-2xl overflow-hidden">
+  <div class="drink-card bg-zinc-900 rounded-2xl overflow-hidden" data-category="cocktail">
     <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87" class="h-48 w-full object-cover">
     <div class="p-5">
       <h2 class="text-xl font-bold">Red Wine Glass</h2>
-      <p class="text-gray-400 text-sm mt-2">Premium imported wine</p>
+      <p class="text-gray-400 text-sm">Premium imported wine</p>
       <div class="flex justify-between mt-4">
         <span class="text-amber-400 font-bold">Rs. 900</span>
-        <a href="order.html" class="bg-amber-500 text-black px-3 py-1 rounded-full">Order</a>
+        <a href="#" class="bg-amber-500 text-black px-3 py-1 rounded-full">Order</a>
       </div>
     </div>
   </div>
 
 </section>
-
 <footer class="bg-black text-gray-300">
   <div class="max-w-7xl mx-auto px-6 py-16">
 
@@ -292,7 +292,6 @@
           Opening Hours
         </h3>
 
-       
         <ul class="space-y-3 text-gray-300">
 
   <li class="flex justify-between border-b border-white/10 pb-2">
@@ -351,8 +350,39 @@
   </div>
 </footer>
 
+<!-- SCRIPT -->
 <script>
-  const menuBtn = document.getElementById("menuBtn");
+
+const buttons = document.querySelectorAll(".filter-btn");
+const cards = document.querySelectorAll(".drink-card");
+
+buttons.forEach(btn => {
+  btn.addEventListener("click", () => {
+
+    buttons.forEach(b => {
+      b.classList.remove("bg-amber-500","text-black");
+      b.classList.add("bg-zinc-800");
+    });
+
+    btn.classList.add("bg-amber-500","text-black");
+    btn.classList.remove("bg-zinc-800");
+
+    const filter = btn.dataset.filter;
+
+    cards.forEach(card => {
+      const category = card.dataset.category;
+
+      if(filter === "all" || filter === category){
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+
+  });
+});
+
+ const menuBtn = document.getElementById("menuBtn");
   const mobileMenu = document.getElementById("mobileMenu");
   const closeBtn = document.getElementById("closeBtn");
   const overlay = document.getElementById("overlay");

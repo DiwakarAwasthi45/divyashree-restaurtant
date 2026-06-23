@@ -4,27 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Gallery - DivyaShree</title>
+
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
-    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
 </head>
 
 <body class="bg-white text-white">
-     <!-- Top Header -->
-<div class="hidden md:block bg-amber-600 text-white">
-  <div class="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center text-sm">
-    <div class="flex items-center gap-6">
-      <span>📞 +977 98XXXXXXXX</span>
-      <span>📧 info@divyashree.com</span>
-    </div>
 
-    <div class="flex items-center gap-6">
-      <span>🕒 Open Daily: 10 AM - 11 PM</span>
-      <span>📍 Kathmandu, Nepal</span>
-    </div>
+<!-- TOP HEADER -->
+<div class="hidden md:block bg-amber-600 text-white">
+  <div class="max-w-7xl mx-auto px-6 py-2 flex justify-between text-sm">
+    <div>📞 +977 98XXXXXXXX | 📧 info@divyashree.com</div>
+    <div>🕒 Open Daily: 10 AM - 11 PM | 📍 Kathmandu</div>
   </div>
 </div>
-
 <!-- Main Navbar -->
 <header class="sticky top-0 z-50 bg-black/95 backdrop-blur-md border-b border-gray-800">
   <div class="max-w-7xl mx-auto px-6">
@@ -71,100 +64,80 @@
   </div>
 </header>
 
-<!-- Mobile Menu -->
+
+<!-- MOBILE MENU -->
 <div id="mobileMenu"
-  class="fixed top-0 left-1 h-full w-72 bg-black text-white border-r border-gray-800
-         transform -translate-x-full transition-transform duration-300 ease-in-out lg:hidden z-50">
+  class="fixed top-0 left-0 h-full w-72 bg-black text-white
+  transform -translate-x-full transition duration-300 z-50">
 
-  <div class="p-6 border-b border-gray-800 flex justify-between items-center">
-    <h2 class="text-amber-400 font-bold text-xl">Menu</h2>
-
-    <button id="closeBtn" class="text-white text-2xl">
-      ✖
-    </button>
+  <div class="p-5 border-b border-gray-700 flex justify-between">
+    <h2 class="text-amber-400 font-bold">Menu</h2>
+    <button id="closeBtn">✖</button>
   </div>
 
-  <ul class="flex flex-col p-6 space-y-5 font-medium">
-    <li><a href="index.html" class="hover:text-amber-400">Home</a></li>
-    <li><a href="menu.html" class="hover:text-amber-400">Menu</a></li>
-    <li><a href="bar.html" class="hover:text-amber-400">Bar</a></li>
-    <li><a href="gallery.html" class="hover:text-amber-400">Gallery</a></li>
-    <li><a href="booking.html" class="hover:text-amber-400">Book Table</a></li>
-    <li><a href="blog.html" class="hover:text-amber-400">Blog</a></li>
-    <li><a href="about.html" class="hover:text-amber-400">About</a></li>
-    <li><a href="contact.html" class="hover:text-amber-400">Contact</a></li>
+  <ul class="p-5 space-y-4">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="menu.html">Menu</a></li>
+    <li><a href="bar.html">Bar</a></li>
+    <li><a href="gallery.html" class="text-amber-400">Gallery</a></li>
+    <li><a href="booking.html">Book</a></li>
+    <li><a href="contact.html">Contact</a></li>
   </ul>
 </div>
 
 <!-- HERO -->
-<section class="relative h-[50vh] flex items-center justify-center">
-  <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4')] bg-cover"></div>
+<section class="relative h-[45vh] flex items-center justify-center">
+  <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4')] bg-cover bg-center"></div>
   <div class="absolute inset-0 bg-black/70"></div>
 
   <div class="relative text-center">
     <h1 class="text-5xl font-bold text-amber-400">Gallery</h1>
-    <p class="text-gray-300 mt-3">Food • Drinks • Interior</p>
+    <p class="text-gray-300 mt-2">Food • Drinks • Interior</p>
   </div>
 </section>
 
+<!-- FILTER -->
 <section class="py-8 text-center">
-  <div class="flex justify-center flex-wrap gap-3">
+  <div class="flex justify-center gap-3 flex-wrap">
 
-    <button class="filter-btn active px-4 py-2 rounded-full bg-amber-500 text-black" data-filter="all">
-      All
-    </button>
-
-    <button class="filter-btn px-4 py-2 rounded-full bg-zinc-800" data-filter="food">
-      Food
-    </button>
-
-    <button class="filter-btn px-4 py-2 rounded-full bg-zinc-800" data-filter="drinks">
-      Drinks
-    </button>
-
-    <button class="filter-btn px-4 py-2 rounded-full bg-zinc-800" data-filter="interior">
-      Interior
-    </button>
+    <button class="filter-btn bg-amber-500 text-black px-4 py-2 rounded-full" data-filter="all">All</button>
+    <button class="filter-btn bg-zinc-800 px-4 py-2 rounded-full" data-filter="food">Food</button>
+    <button class="filter-btn bg-zinc-800 px-4 py-2 rounded-full" data-filter="drinks">Drinks</button>
+    <button class="filter-btn bg-zinc-800 px-4 py-2 rounded-full" data-filter="interior">Interior</button>
 
   </div>
 </section>
-
 
 <!-- GALLERY -->
 <section class="max-w-7xl mx-auto px-6 pb-16">
 
   <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
 
-    <!-- FOOD -->
-    <img data-category="food" src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38"
-      class="gallery-item rounded-xl h-56 w-full object-cover">
+    <img data-category="food" class="gallery-item rounded-xl h-56 object-cover"
+      src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38">
 
-    <img data-category="food" src="https://images.unsplash.com/photo-1559847844-5315695dadae"
-      class="gallery-item rounded-xl h-56 w-full object-cover">
+    <img data-category="food" class="gallery-item rounded-xl h-56 object-cover"
+      src="https://images.unsplash.com/photo-1559847844-5315695dadae">
 
-    <!-- DRINKS -->
-    <img data-category="drinks" src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b"
-      class="gallery-item rounded-xl h-56 w-full object-cover">
+    <img data-category="drinks" class="gallery-item rounded-xl h-56 object-cover"
+      src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b">
 
-    <img data-category="drinks" src="https://images.unsplash.com/photo-1470337458703-46ad1756a187"
-      class="gallery-item rounded-xl h-56 w-full object-cover">
+    <img data-category="drinks" class="gallery-item rounded-xl h-56 object-cover"
+      src="https://images.unsplash.com/photo-1470337458703-46ad1756a187">
 
-    <!-- INTERIOR -->
-    <img data-category="interior" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0"
-      class="gallery-item rounded-xl h-56 w-full object-cover">
+    <img data-category="interior" class="gallery-item rounded-xl h-56 object-cover"
+      src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0">
 
-    <img data-category="interior" src="https://images.unsplash.com/photo-1559339352-11d035aa65de"
-      class="gallery-item rounded-xl h-56 w-full object-cover">
+    <img data-category="interior" class="gallery-item rounded-xl h-56 object-cover"
+      src="https://images.unsplash.com/photo-1559339352-11d035aa65de">
 
-    <!-- MIX -->
-    <img data-category="food" src="https://images.unsplash.com/photo-1544025162-d76694265947"
-      class="gallery-item rounded-xl h-56 w-full object-cover">
+    <img data-category="food" class="gallery-item rounded-xl h-56 object-cover"
+      src="https://images.unsplash.com/photo-1544025162-d76694265947">
 
-    <img data-category="drinks" src="https://images.unsplash.com/photo-1470337458703-46ad1756a187"
-      class="gallery-item rounded-xl h-56 w-full object-cover">
+    <img data-category="drinks" class="gallery-item rounded-xl h-56 object-cover"
+      src="https://images.unsplash.com/photo-1470337458703-46ad1756a187">
 
   </div>
-
 </section>
 
 <footer class="bg-black text-gray-300">
@@ -263,30 +236,23 @@
   </div>
 </footer>
 
+<!-- JS -->
 <script>
+  // MOBILE MENU
   const menuBtn = document.getElementById("menuBtn");
   const mobileMenu = document.getElementById("mobileMenu");
   const closeBtn = document.getElementById("closeBtn");
-  const overlay = document.getElementById("overlay");
 
-  function openMenu() {
+  menuBtn.onclick = () => {
     mobileMenu.classList.remove("-translate-x-full");
-    mobileMenu.classList.add("translate-x-0");
-    overlay.classList.remove("hidden");
-  }
+  };
 
-  function closeMenu() {
+  closeBtn.onclick = () => {
     mobileMenu.classList.add("-translate-x-full");
-    mobileMenu.classList.remove("translate-x-0");
-    overlay.classList.add("hidden");
-  }
+  };
 
-  menuBtn.addEventListener("click", openMenu);
-  closeBtn.addEventListener("click", closeMenu);
-  overlay.addEventListener("click", closeMenu);
-
-   // FILTER LOGIC
-  const buttons = document.querySelectorAll("#filter-btn");
+  // FILTER
+  const buttons = document.querySelectorAll(".filter-btn");
   const items = document.querySelectorAll(".gallery-item");
 
   buttons.forEach(btn => {
@@ -300,18 +266,17 @@
       btn.classList.add("bg-amber-500", "text-black");
       btn.classList.remove("bg-zinc-800");
 
-      const filter = btn.getAttribute("data-filter");
+      const filter = btn.dataset.filter;
 
       items.forEach(item => {
-        const cat = item.getAttribute("data-category");
-
         item.style.display =
-          (filter === "all" || filter === cat) ? "block" : "none";
+          filter === "all" || item.dataset.category === filter
+            ? "block"
+            : "none";
       });
 
     });
   });
-
 </script>
 
 </body>
