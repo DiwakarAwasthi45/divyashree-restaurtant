@@ -24,7 +24,6 @@
   </div>
 </div>
 
-<!-- Main Navbar -->
 <header class="sticky top-0 z-50 bg-black/95 backdrop-blur-md border-b border-gray-800">
   <div class="max-w-7xl mx-auto px-6">
     <div class="flex items-center justify-between h-20">
@@ -54,7 +53,7 @@
 
         <!-- CTA Button -->
         <a
-          href="booking.html"
+          href="banquet-booking.html"
           class="hidden sm:flex bg-amber-500 hover:bg-amber-600 px-5 py-2.5 rounded-full font-semibold text-black transition"
         >
           Reserve Now
@@ -93,6 +92,14 @@
     <li><a href="about.html" class="hover:text-amber-400">About</a></li>
     <li><a href="contact.html" class="hover:text-amber-400">Contact</a></li>
   </ul>
+   <div class="px-6 pb-6 mt-auto">
+    <a
+      href="banquet-booking.html"
+      class="block w-full text-center bg-amber-500 hover:bg-amber-600 px-5 py-3 rounded-full font-semibold text-black transition"
+    >
+      Reserve Now
+    </a>
+  </div>
 </div>
 
 <section class="relative min-h-screen">
@@ -494,6 +501,74 @@
         class="inline-block bg-amber-500 hover:bg-amber-600 text-white px-8 py-3 rounded-full font-semibold transition"
       >
         View Full Gallery
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<section class="bg-gray-50 py-20">
+  <div class="max-w-7xl mx-auto px-5 text-center">
+
+    <!-- Heading -->
+    <h2 class="text-4xl font-bold text-gray-800 mb-4">
+      Divya Shree Banquet Hall
+    </h2>
+
+    <p class="text-gray-600 max-w-2xl mx-auto mb-12">
+      Celebrate your special moments at Divya Shree Banquet — perfect for weddings, receptions, birthdays,
+      corporate events, and family gatherings with elegant decoration and premium services.
+    </p>
+
+    <!-- Cards -->
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+
+      <!-- Card 1 -->
+      <div class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-xl transition duration-300">
+        <img src="https://images.unsplash.com/photo-1529636798458-92182e662485?auto=format&fit=crop&w=800&q=80"
+             class="w-full h-48 object-cover" alt="Wedding Event">
+
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Wedding & Reception</h3>
+          <p class="text-gray-600 text-sm">
+            Grand wedding setup with stage decoration, lighting, floral design, and premium seating arrangements.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-xl transition duration-300">
+        <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=800&q=80"
+             class="w-full h-48 object-cover" alt="Corporate Event">
+
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Corporate Events</h3>
+          <p class="text-gray-600 text-sm">
+            Perfect space for meetings, seminars, conferences, and professional business gatherings.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white rounded-2xl overflow-hidden shadow hover:shadow-xl transition duration-300">
+        <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=800&q=80"
+             class="w-full h-48 object-cover" alt="Family Event">
+
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Family Functions</h3>
+          <p class="text-gray-600 text-sm">
+            Birthdays, anniversaries, and cultural events with customized decoration and catering.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Button -->
+    <div class="mt-12">
+      <a href="banquet-booking.html"
+         class="inline-block  text-white px-8 py-3 rounded-full bg-amber-500 hover:bg-amber-600 transition">
+        Book Your Event
       </a>
     </div>
 
@@ -910,7 +985,7 @@
           <!-- Button -->
           <button
   type="button"
-  onclick="alert('Reservation submitted successfully!'); window.location.href='booking-confirm.html';"
+  onclick=" window.location.href='booking-confirm.html';"
   class="w-full bg-amber-500 hover:bg-amber-600 text-black font-bold py-3 rounded-lg transition">
   Confirm Booking
 </button>

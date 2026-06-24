@@ -48,7 +48,7 @@
 
         <!-- CTA Button -->
         <a
-          href="booking.html"
+          href="banquet-booking.html"
           class="hidden sm:flex bg-amber-500 hover:bg-amber-600 px-5 py-2.5 rounded-full font-semibold text-black transition"
         >
           Reserve Now
@@ -64,25 +64,37 @@
   </div>
 </header>
 
-
-<!-- MOBILE MENU -->
+<!-- Mobile Menu -->
 <div id="mobileMenu"
-  class="fixed top-0 left-0 h-full w-72 bg-black text-white
-  transform -translate-x-full transition duration-300 z-50">
+  class="fixed top-0 left-1 h-full w-72 bg-black text-white border-r border-gray-800
+         transform -translate-x-full transition-transform duration-300 ease-in-out lg:hidden z-50">
 
-  <div class="p-5 border-b border-gray-700 flex justify-between">
-    <h2 class="text-amber-400 font-bold">Menu</h2>
-    <button id="closeBtn">✖</button>
+  <div class="p-6 border-b border-gray-800 flex justify-between items-center">
+    <h2 class="text-amber-400 font-bold text-xl">Menu</h2>
+
+    <button id="closeBtn" class="text-white text-2xl">
+      ✖
+    </button>
   </div>
 
-  <ul class="p-5 space-y-4">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="menu.html">Menu</a></li>
-    <li><a href="bar.html">Bar</a></li>
-    <li><a href="gallery.html" class="text-amber-400">Gallery</a></li>
-    <li><a href="booking.html">Book</a></li>
-    <li><a href="contact.html">Contact</a></li>
+  <ul class="flex flex-col p-6 space-y-5 font-medium">
+    <li><a href="index.html" class="hover:text-amber-400">Home</a></li>
+    <li><a href="menu.html" class="hover:text-amber-400">Menu</a></li>
+    <li><a href="bar.html" class="hover:text-amber-400">Bar</a></li>
+    <li><a href="gallery.html" class="hover:text-amber-400">Gallery</a></li>
+    <li><a href="booking.html" class="hover:text-amber-400">Book Table</a></li>
+    <li><a href="blog.html" class="hover:text-amber-400">Blog</a></li>
+    <li><a href="about.html" class="hover:text-amber-400">About</a></li>
+    <li><a href="contact.html" class="hover:text-amber-400">Contact</a></li>
   </ul>
+   <div class="px-6 pb-6 mt-auto">
+    <a
+      href="banquet-booking.html"
+      class="block w-full text-center bg-amber-500 hover:bg-amber-600 px-5 py-3 rounded-full font-semibold text-black transition"
+    >
+      Reserve Now
+    </a>
+  </div>
 </div>
 
 <!-- HERO -->
